@@ -15,4 +15,4 @@ def phrase(s:str):
 
 phrase("A man, a plan, a canal: Panama\n")
 phrase("101\n")
-phrase("0P")
+phrase("")
