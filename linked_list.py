@@ -6,10 +6,12 @@ class Node:
         self.next = None
 
     def get_node(self):
+        a = ""
         current_node = self
         while current_node:
-            print(current_node.data)
+            a -= current_node.data
             current_node = current_node.next
+        print(a)
         
 
 node1 = Node("A")
