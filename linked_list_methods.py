@@ -9,29 +9,41 @@ class Node:
         self.data = data
         self.next = None
 
-
 def show(node):
     while node is not None:
         print(f"{node.data}", end="")
         node = node.next
         if node is not None:
-            print(f"->", end="")
+            print(f" -> ", end="")
     print()
 
 
-node1 = Node(1)
-node2 = Node(2)
-node3 = Node(3)
+head = Node(1)
+head.next = Node(2)
+head.next.next = Node(3)
+head.next.next.next = Node(4)
 
-node1.next = node2
-node2.next = node3
-show(node1)
+show(head) # The first linked list (1 -> 2 -> 3)
+
+#INputing at the end of a linkedlist
+
+def insertAtEnd(head, x):
+    
+    new = Node(x)
+    last = head
 
 
-node7 = Node(7)
+    while last.next is not None:
+        last = last.next
+
+    last.next = new
+
+    return head
 
 
-node7.next = node1
+a = insertAtEnd(head, 5)
 
-show(node7)
+show(a)
+
+
 
