@@ -43,7 +43,18 @@ def insertAtEnd(head, x):
 
 a = insertAtEnd(head, 5)
 
-show(a)
+show(a) # The linked list 1 -> 2 -> 3 -> 4 -> 5
 
 
+#Inserting at the start of the list
 
+def insertAtStart(head, x):
+    new = Node(x)
+
+    new.next = head
+
+    return new
+
+
+b = insertAtStart(head, 0)
+show(b)
