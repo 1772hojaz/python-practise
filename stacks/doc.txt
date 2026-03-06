@@ -1,0 +1,25 @@
+                     STACKS
+
+A stack is a data structure that can hold many elements and the last element added is the first element to be removed.
+ 
+
+            BASIC OPERATIONS OF A STACK
+
+ENQUEUE: Adds a new element to the queue
+DEQUEUE: Removes and return the first element from the queue
+PEEK: Returns the first element in the queue
+isEmpty: Check if the queue is empty.
+SIZE: Finds the number of elements in the queue.
+
+Queues can be implemented by using arrays or linked lists
+
+Ques can be used to implement job scheduling for an office printer.
+
+
+
+           STACK IMPLEMENTATION USING LINKED LISTS
+
+A big advantage of using linked lists is that nodes can be stored anywhere there is free spce, thy do not need to be stored contiguouslyrigh tafter each other
+
+
+
