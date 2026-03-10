@@ -27,11 +27,8 @@ class Linked:
 
         elif position == 0:
             current = self.head
-
             self.head = Node(element)
-
             self.head.next = current
-
             self.size += 1
 
             return True
@@ -76,6 +73,7 @@ class Linked:
         elif position > self.size:
             print(f"position must be less than {self.size}")
 
+
         elif position == 0:
             current = self.head
 
@@ -85,8 +83,9 @@ class Linked:
 
             return True
 
+
         else:
-            current = self.size
+            current = self.head
 
             for i in range(position-1):
                 current = current.next
