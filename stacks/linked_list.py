@@ -76,4 +76,6 @@ l1.append(10)
 l1.append(20)
 l1.append(30)
 
+l1.add(0,90)
+l1.add(3,500)
 print(l1)
