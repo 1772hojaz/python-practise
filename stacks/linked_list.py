@@ -68,5 +68,33 @@ class Linked:
         self.add(self.size, element)
         return True
 
+    def delete(self,position):
+        if position < 0:
+            print("Position must greater than 0")
+            return False
+
+        elif position > self.size:
+            print(f"position must be less than {self.size}")
+
+        elif position == 0:
+            current = self.head
+
+            self.head = current.next
+
+            self.size -= 1
+
+            return True
+
+        else:
+            current = self.size
+
+            for i in range(position-1):
+                current = current.next
+                i += 1
+
+            current.next = current.next.next
+            self.size -= 1
+
+            return True
 
 
