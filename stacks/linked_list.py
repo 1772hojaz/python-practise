@@ -11,26 +11,53 @@ class Node:
         self.data = data
         self.next = None
 
-    def show(self):
-        head = self
-        while head:
-            print(head.data)
-            head = head.next
+class Linked:
+    def __init__(self):
+        self.head = None
+        self.size = 0
 
-    def add(self, element, position):
-        head = self
-        new_Node = Node(element)
-        if position == 1:
-            new_node.next = head
-            return new_node
+    def add(self, position, element):
+        if position < 0:
+            print("position of the element should be greater than 0")
+            return False
 
-        elif:
-        
-n1 = Node(1)
-n2 = Node(2)
-n3 = Node(3)
+        elif position == 0:
+            current = self.head
 
-n1.next = n2
-n2.next = n3
+            self.head = Node(element)
 
-n1.show()
+            self.head.next = current
+
+            self.size += 1
+
+            return True
+
+        elif position > self.size:
+            print(f"position of the element should be less than {self.size}")
+            return False
+
+    def __str__(self):
+
+        my_list = []
+
+        current = self.head
+
+        while current:
+            my_list.append(str(current.data))
+            current = current.next
+
+        return "->".join(my_list)
+
+    def append(self, element):
+        self.add(0, element)
+        return True
+
+
+
+l1 = Linked()
+
+l1.append(10)
+l1.append(20)
+l1.append(30)
+
+print(l1)
