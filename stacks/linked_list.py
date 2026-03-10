@@ -70,19 +70,15 @@ class Linked:
             print("Position must greater than 0")
             return False
 
-        elif position > self.size:
+        elif position >= self.size:
             print(f"position must be less than {self.size}")
-
+            return False
 
         elif position == 0:
             current = self.head
-
             self.head = current.next
-
-            self.size -= 1
-
+            self.size += 1
             return True
-
 
         else:
             current = self.head

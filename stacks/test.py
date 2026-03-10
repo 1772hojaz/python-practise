@@ -35,7 +35,7 @@ l1.delete(1)
 print(f"{l1}\n")
 
 "Deleting the last node"
-l1.delete(4)
+l1.delete(3)
 print(f"{l1}\n")
 
 
