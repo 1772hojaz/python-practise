@@ -1,13 +1,10 @@
 #!/bin/python3
+import linked_list as l
 
+l1 = l.Linked()
 
-class Linked:
-    def __init__(self):
-        self.head = None
-        self.size = 0
+l1.append(1)
+l1.append(2)
+l1.append(3)
 
-ll = Linked()
-ll.append(10)
-ll.append(20)
-
-print(ll)
+print(l1)
