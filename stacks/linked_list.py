@@ -21,6 +21,10 @@ class Linked:
             print("position of the element should be greater than 0")
             return False
 
+        elif position > self.size:
+            print(f"position of the element should be less than {self.size}")
+            return False
+
         elif position == 0:
             current = self.head
 
@@ -32,9 +36,21 @@ class Linked:
 
             return True
 
-        elif position > self.size:
-            print(f"position of the element should be less than {self.size}")
-            return False
+        else:
+            current = self.head
+            new_node = Node(element)
+
+            for i in range(position-1):
+                current = current.next
+                i += 1
+
+            new_node.next = current.next
+            current.next = new_node
+            self.size += 1
+
+            return True
+                
+
 
     def __str__(self):
 
@@ -49,7 +65,7 @@ class Linked:
         return "->".join(my_list)
 
     def append(self, element):
-        self.add(0, element)
+        self.add(self.size, element)
         return True
 
 
