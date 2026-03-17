@@ -12,6 +12,8 @@ class Doubly:
         self.head = head
         self.size = 0
 
+
+
 n1 = Node(1)
 n2 = Node(2)
 n3 = Node(3)
