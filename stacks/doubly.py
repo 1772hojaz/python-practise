@@ -8,25 +8,50 @@ class Node:
         self.prev = None
 
 class Doubly:
-    def __init__(self, head, size):
-        self.head = head
+    def __init__(self):
+        self.head = None
         self.size = 0
 
+    def insert(self, position, value):
+        
+        if position < 0 or position > self.size:
+            print(f"Invalid position value:the position must be > 0 and < {self.size}")
+            return 0
+
+        elif position == 0:
+            new_node = Node(value)
+            current = self.head
+
+            self.head = new_node
+            new_node.next = current
+            self.size += 1
+            return 1
+        else:
+            new_node = Node(value)
+            current = self.head
+            
+            for i in range(position - 1):
+                current = current.next
+                i += 1
+            current.next = new_node.next
+            current.next = new_node
+            self.size += 1
+
+            return 1
 
 
-n1 = Node(1)
-n2 = Node(2)
-n3 = Node(3)
-n4 = Node(4)
 
-n1.next = n2
-n2.prev = n1
-n2.next = n3
-n3.prev = n2
-n3.next = n4
-n4.prev = n3
+    def __str__(self):
+        a = []
+        current = self.head
 
-tail = n3
-while tail:
-    print(f"this is the tail: {tail.data}")
-    tail = tail.prev
+        while current:
+            a.append(current.data)
+            current = current.next
+        
+        return f"{a}" 
+
+    def add(self, value):
+        self.insert(self.size, value)
+        return 1
+
