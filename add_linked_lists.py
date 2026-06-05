@@ -1,19 +1,20 @@
 #!/bin/python3
 
 def add_two(l1,l2):
-
+# tying to thing about this problem
 
     def turn(l):
         a = []
         while l:
             a.append(l.data)
             l = l.next
-            a = a[::-1]
+        a = a[::-1]
         
         return "".join(map(str,a))
 
-    x = turn(l1)
-    y = turn(l2)
+    x = int(turn(l1))
+    y = int(turn(l2))
+
 
     print(f"{x} and  {y}")
 
@@ -25,7 +26,7 @@ class Node:
 n0 = Node(0)
 n1 = Node(1)
 n2 = Node(2)
-n3 = Node(4)
+n3 = Node(3)
 
 n0.next = n1
 n1.next = n2
