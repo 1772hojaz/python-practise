@@ -8,6 +8,7 @@ def add_two(l1,l2):
         while l:
             a.append(l.data)
             l = l.next
+            a = a[::-1]
         
         return "".join(map(str,a))
 
