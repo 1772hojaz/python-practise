@@ -1,13 +1,15 @@
 #!/bin/python3
 
 def add_two(l1,l2):
-    a = []
+
 
     def turn(l):
+        a = []
         while l:
             a.append(l.data)
             l = l.next
-        return a
+        
+        return "".join(map(str,a))
 
     x = turn(l1)
     y = turn(l2)
