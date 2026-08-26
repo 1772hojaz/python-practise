@@ -13,6 +13,6 @@ from adding_binary import add
 
 a = [0,1,0]
 
-b = [1,1,0]
+b = [0,1,0]
 
 print(add(a,b))

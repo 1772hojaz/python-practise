@@ -11,5 +11,5 @@ def add(a, b):
             result.append(x%2)
             carry = x//2
             i-=1
-            print(carry)
-        return result
+            
+        return result[::-1]
